@@ -57,9 +57,6 @@ GEM
       thor (~> 0.14.6)
     guard-rspec (0.6.0)
       guard (>= 0.10.0)
-    guard-spork (0.5.2)
-      guard (>= 0.10.0)
-      spork (>= 0.8.4)
     hike (1.2.1)
     i18n (0.6.0)
     journey (1.0.3)
@@ -164,7 +161,6 @@ DEPENDENCIES
   capybara (= 1.1.2)
   coffee-rails (= 3.2.2)
   guard-rspec
-  guard-spork
   jquery-rails (= 2.0.0)
   mongrel (= 1.2.0.pre2)
   pg (= 0.13.1)

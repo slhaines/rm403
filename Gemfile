@@ -34,7 +34,7 @@ group :test do
   gem 'rb-notifu', '0.0.4'
   gem 'win32console', '1.3.0'
   gem 'win32-process'
-  gem 'guard-spork'				# guard-spork does not work in Windows!
+#  gem 'guard-spork'				# guard-spork does not work in Windows!
   gem 'spork', '> 0.9.0.rc9'
 end
 
