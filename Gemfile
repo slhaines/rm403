@@ -24,6 +24,7 @@ group :development do
   gem 'mongrel', '1.2.0.pre2'	# for ruby 1.9.2
   gem 'rspec-rails'
   gem 'guard-rspec'
+  gem 'spork', '> 0.9.0.rc9'
 end
 
 group :test do
