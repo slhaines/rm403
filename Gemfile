@@ -23,8 +23,9 @@ gem 'jquery-rails', '2.0.0'
 group :development do
   gem 'mongrel', '1.2.0.pre2'	# for ruby 1.9.2
   gem 'rspec-rails'
-  gem 'guard-rspec'
-  gem 'spork', '> 0.9.0.rc9'
+#  gem 'spork', '> 0.9.0.rc9'
+#  gem 'spork-rails'
+#  gem 'guard-rspec'
 end
 
 group :test do
@@ -36,11 +37,13 @@ group :test do
   gem 'win32console', '1.3.0'
   gem 'win32-process'
 #  gem 'guard-spork'				# guard-spork does not work in Windows!
-  gem 'spork', '> 0.9.0.rc9'
+#  gem 'spork', '> 0.9.0.rc9'
+  gem 'spork-rails'
+  gem 'guard-rspec'
 end
 
 group :production do
-  gem 'mongrel', '1.2.0.pre2'	# for ruby 1.9.2
+  gem 'pg', '0.13.1'
 end
 
 # To use ActiveModel has_secure_password
