@@ -162,16 +162,16 @@ PLATFORMS
 
 DEPENDENCIES
   capybara (= 1.1.2)
-  coffee-rails (= 3.2.2)
+  coffee-rails (~> 3.2.2)
   guard-rspec
-  jquery-rails (= 2.0.0)
+  jquery-rails (~> 2.0.0)
   mongrel (= 1.2.0.pre2)
   pg (= 0.13.1)
   rails (= 3.2.2)
   rb-fchange (= 0.0.5)
   rb-notifu (= 0.0.4)
   rspec-rails
-  sass-rails (= 3.2.4)
+  sass-rails (~> 3.2.3)
   spork-rails
   uglifier (= 1.2.3)
   win32-process
