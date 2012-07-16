@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
-gem 'rails', '3.2.3'
+gem 'rails', '3.2.6'    # '3.2.3'
 gem 'pg', '0.13.1'
 
 group :development do
