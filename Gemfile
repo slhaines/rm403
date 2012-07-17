@@ -5,11 +5,11 @@ gem 'pg', '0.13.1'
 
 group :development do
 #  gem 'mongrel', '1.2.0.pre2'	# for ruby 1.9.2
-  gem 'rspec-rails', '2.9.0'
+  gem 'rspec-rails', '2.10.0'     # '2.9.0'
 end
 
 group :test do
-  gem 'rspec-rails', '2.9.0'
+  gem 'rspec-rails', '2.10.0'     # '2.9.0'
   gem 'capybara', '1.1.2'
   gem 'rb-fchange', '0.0.5'
   gem 'rb-notifu', '0.0.4'
