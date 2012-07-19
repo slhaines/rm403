@@ -1,21 +1,22 @@
 source 'https://rubygems.org'
 
-gem 'rails', '3.2.6'    # '3.2.3'
+gem 'rails', '3.2.6'					# '3.2.3'
+gem 'bootstrap-sass', '2.0.0'
 gem 'pg', '0.13.1'
 
 group :development do
 #  gem 'mongrel', '1.2.0.pre2'	# for ruby 1.9.2
-  gem 'rspec-rails', '2.10.0'     # '2.9.0'
+  gem 'rspec-rails', '2.10.0'		# '2.9.0'
 end
 
 group :test do
-  gem 'rspec-rails', '2.10.0'     # '2.9.0'
+  gem 'rspec-rails', '2.10.0'		# '2.9.0'
   gem 'capybara', '1.1.2'
   gem 'rb-fchange', '0.0.5'
   gem 'rb-notifu', '0.0.4'
   gem 'win32console', '1.3.0'
   gem 'win32-process'
-#  gem 'guard-spork'				# guard-spork does not work in Windows!
+#  gem 'guard-spork'					# guard-spork does not work in Windows!
 #  gem 'spork', '> 0.9.0.rc9'
   gem 'spork-rails'
   gem 'guard-rspec'
