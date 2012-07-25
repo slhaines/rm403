@@ -2,12 +2,15 @@ source 'https://rubygems.org'
 
 gem 'rails', '3.2.6'					# '3.2.3'
 gem 'bootstrap-sass', '2.0.0'
+gem 'bcrypt-ruby', '3.0.1'			# Chap 6
 gem 'pg', '0.13.1'
 
 group :development do
 #  gem 'mongrel', '1.2.0.pre2'	# for ruby 1.9.2
   gem 'rspec-rails', '2.10.0'		# '2.9.0'
 end
+
+gem 'annotate', '~> 2.4.1.beta', group: :development
 
 group :test do
   gem 'rspec-rails', '2.10.0'		# '2.9.0'
