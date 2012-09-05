@@ -8,9 +8,10 @@ gem 'pg', '0.13.1'
 group :development do
 #  gem 'mongrel', '1.2.0.pre2'	# for ruby 1.9.2
   gem 'rspec-rails', '2.10.0'		# '2.9.0'
+  gem 'annotate', '~> 2.4.1.beta'
 end
 
-gem 'annotate', '~> 2.4.1.beta', group: :development
+#gem 'annotate', '~> 2.4.1.beta', group: :development
 
 group :test do
   gem 'rspec-rails', '2.10.0'		# '2.9.0'
@@ -23,6 +24,7 @@ group :test do
 #  gem 'spork', '> 0.9.0.rc9'
   gem 'spork-rails'
   gem 'guard-rspec'
+  gem 'factory_girl_rails', '1.4.0'
 end
 
 # Gems used only for assets and not required
