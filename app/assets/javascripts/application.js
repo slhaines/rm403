@@ -12,5 +12,6 @@
 //
 //= require jquery
 //= require jquery_ujs
+//= require_tree .
 //= require bootstrap
 // require_tree .	# rem out this line so won't get Sprockets::CircularDependencyError
