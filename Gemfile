@@ -1,29 +1,37 @@
 source 'https://rubygems.org'
 
-gem 'rails', '3.2.6'					# '3.2.3'
+gem 'rails', '3.2.8'					  # '3.2.3'
 gem 'bootstrap-sass', '2.0.0'
 gem 'bcrypt-ruby', '3.0.1'			# Chap 6
 gem 'pg', '0.13.1'
 
 group :development do
 #  gem 'mongrel', '1.2.0.pre2'	# for ruby 1.9.2
-  gem 'rspec-rails', '2.10.0'		# '2.9.0'
+  gem 'rspec-rails', '2.11.0'		# '2.9.0', '2.10.0'
+  gem 'guard-rspec', '0.5.5'
+  gem 'guard-spork', '1.2.0'    # '0.3.2'
+  gem 'spork', '0.9.0'
+  gem 'wdm', '~> 0.0.3'
+
   gem 'annotate', '~> 2.4.1.beta'
 end
 
-#gem 'annotate', '~> 2.4.1.beta', group: :development
-
 group :test do
-  gem 'rspec-rails', '2.10.0'		# '2.9.0'
+#  gem 'rspec-rails', '2.11.0'		# '2.9.0', '2.10.0'
+#  gem 'guard-rspec', '0.5.5'
+#  gem 'guard-spork', '0.3.2'
+#  gem 'spork', '0.9.0'
+#  gem 'wdm', '~> 0.0.3'
+
   gem 'capybara', '1.1.2'
   gem 'rb-fchange', '0.0.5'
   gem 'rb-notifu', '0.0.4'
   gem 'win32console', '1.3.0'
   gem 'win32-process'
-#  gem 'guard-spork'					# guard-spork does not work in Windows!
+#  gem 'guard-spork'					# guard-spork does not work in Windows! - try again w/ later versions
 #  gem 'spork', '> 0.9.0.rc9'
-  gem 'spork-rails'
-  gem 'guard-rspec'
+#  gem 'spork-rails'
+#  gem 'guard-rspec'
   gem 'factory_girl_rails', '1.4.0'
   gem 'cucumber-rails', '1.2.1', require: false
   gem 'database_cleaner', '0.7.0'
@@ -32,7 +40,7 @@ end
 # Gems used only for assets and not required
 # in production environments by default.
 group :assets do
-  gem 'sass-rails',   '3.2.4'		# '~> 3.2.3'
+  gem 'sass-rails',   '3.2.5'		# '~> 3.2.3', '3.2.4'
   gem 'coffee-rails', '3.2.2'		# '~> 3.2.2'
   gem 'uglifier',     '1.2.3'
 end
