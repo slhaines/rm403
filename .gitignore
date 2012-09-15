@@ -27,4 +27,4 @@ public/system
 # public/assets
 # /Gemfile.lock
 
-app/views/sessions/new_notag.html.erb  # obsolete version of new.html.erb
+app/views/sessions/new_tag.html.erb    # alternative version of new.html.erb - doesn't work!
