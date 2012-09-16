@@ -3,6 +3,9 @@ source 'https://rubygems.org'
 gem 'rails', '3.2.8'					  # '3.2.3'
 gem 'bootstrap-sass', '2.0.0'
 gem 'bcrypt-ruby', '3.0.1'			# Chap 6
+gem 'faker', '1.0.1'            # Chap 9
+gem 'will_paginate', '3.0.3'
+gem 'bootstrap-will_paginate', '0.0.6'
 gem 'pg', '0.13.1'
 
 group :development do
@@ -17,21 +20,11 @@ group :development do
 end
 
 group :test do
-#  gem 'rspec-rails', '2.11.0'		# '2.9.0', '2.10.0'
-#  gem 'guard-rspec', '0.5.5'
-#  gem 'guard-spork', '0.3.2'
-#  gem 'spork', '0.9.0'
-#  gem 'wdm', '~> 0.0.3'
-
   gem 'capybara', '1.1.2'
   gem 'rb-fchange', '0.0.5'
   gem 'rb-notifu', '0.0.4'
   gem 'win32console', '1.3.0'
   gem 'win32-process'
-#  gem 'guard-spork'					# guard-spork does not work in Windows! - try again w/ later versions
-#  gem 'spork', '> 0.9.0.rc9'
-#  gem 'spork-rails'
-#  gem 'guard-rspec'
   gem 'factory_girl_rails', '1.4.0'
   gem 'cucumber-rails', '1.2.1', require: false
   gem 'database_cleaner', '0.7.0'
