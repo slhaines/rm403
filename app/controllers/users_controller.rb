@@ -12,27 +12,33 @@ class UsersController < ApplicationController
     @user = User.find(params[:id])
   end
   def new
-    @user = User.new
+    if signed_in?
+      redirect_to(root_path)
+    else
+      @user = User.new
+    end
   end
   def create
-    @user = User.new(params[:user])
-    if @user.save
-      sign_in @user
-      flash[:success] = "Welcome to the Sample App!"
-      redirect_to @user
+    if signed_in?
+      redirect_to(root_path)
     else
-      render 'new'
+      @user = User.new(params[:user])
+      if @user.save
+        sign_in @user
+        flash[:success] = "Welcome to the Sample App!"
+        redirect_to @user
+      else
+        render 'new'
+      end
     end
   end
 
   def edit
-#    @user = User.find(params[:id])
   end
   def update
-#    @user = User.find(params[:id])
     if @user.update_attributes(params[:user])
       # Handle a successful update.
-      flash[:success] = "Profile updated"
+      flash[:notice] = "Profile updated"
       sign_in @user
       redirect_to @user
     else
@@ -40,15 +46,22 @@ class UsersController < ApplicationController
     end
   end
   def destroy
-    User.find(params[:id]).destroy
-    flash[:success] = "User destroyed."
-    redirect_to users_url
+    if current_user?(User.find(params[:id])) then
+      flash[:notice] = "Sorry, can't delete yourself!"
+      redirect_to(root_path)
+    else
+      User.find(params[:id]).destroy
+      flash[:success] = "User destroyed."
+      redirect_to users_url
+    end
   end
 
   private
     def signed_in_user
-      store_location
-      redirect_to signin_url, notice: "Please sign in." unless signed_in?
+      unless signed_in?
+        store_location
+        redirect_to signin_url, notice: "Please sign in." unless signed_in?
+      end
     end
     def correct_user
       @user = User.find(params[:id])

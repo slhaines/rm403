@@ -1,11 +1,12 @@
 source 'https://rubygems.org'
 
 gem 'rails', '3.2.8'					  # '3.2.3'
-gem 'bootstrap-sass', '2.0.0'
+gem 'bootstrap-sass', '2.0.4'   # '2.0.0'
 gem 'bcrypt-ruby', '3.0.1'			# Chap 6
 gem 'faker', '1.0.1'            # Chap 9
 gem 'will_paginate', '3.0.3'
 gem 'bootstrap-will_paginate', '0.0.6'
+gem 'jquery-rails', '2.0.0'		  # '~> 2.0.0'
 gem 'pg', '0.13.1'
 
 group :development do
@@ -38,7 +39,6 @@ group :assets do
   gem 'uglifier',     '1.2.3'
 end
 
-gem 'jquery-rails', '2.0.0'		# '~> 2.0.0'
 
 #group :production do
 #  gem 'pg', '0.13.1'
