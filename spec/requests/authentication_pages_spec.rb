@@ -60,6 +60,16 @@ describe "Authentication" do
           end
         end
       end
+      describe "in the Microposts controller" do
+        describe "submitting to the create action" do
+          before { post microposts_path }
+          specify { response.should redirect_to(signin_path) }
+        end
+        describe "submitting to the destroy action" do
+          before { delete micropost_path(FactoryGirl.create(:micropost)) }
+          specify { response.should redirect_to(signin_path) }
+        end
+      end
       describe "in the Users controller" do
         describe "visiting the edit page" do
           before { visit edit_user_path(user) }
@@ -119,14 +129,13 @@ describe "Authentication" do
       before { sign_in user }
       describe "trying to access New directly" do
         before { visit new_user_path }
-        it { should_not have_selector('title', text: '|') }      
+        it { should_not have_selector('title', text: '|') }       # i.e., shd be on Home page      
 #        it { should have_selector('title', text: base_title) }   # undefined var base_title
-        it { should have_selector('h1', text: 'Welcome to') }
+#        it { should have_selector('h1', text: 'Welcome to') }    # not for a signed_in user!
       end
       describe "trying to access Create directly" do
         before { visit signup_path }
         it { should_not have_selector('title', text: '|') }
-        it { should have_selector('h1', text: 'Welcome to') }
       end
     end
   end
