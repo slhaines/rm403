@@ -96,6 +96,7 @@ describe User do
   it { should_not be_admin }
   it { should respond_to(:microposts) }
   it { should respond_to(:feed) }
+  it { should respond_to(:relationships) }    # Chap 11
 
   describe "with admin attribute set to 'true'" do
     before do
